@@ -19,12 +19,14 @@ class Kayit extends React.Component {
     handleSubmit(event) {
         alert('Gönderilen değer: ' + this.state.value);
         let val = this.state.value
-        this.setState({value: ''});
         event.preventDefault();
-        axios.post("http://localhost:8080/haber_gonder", val).then(res => {
+        axios.post("http://localhost:8080/haber", {val}).then(res => {
             alert("Başarıyla kaydedildi.")
+            this.setState({value: ''});
+
         }, err => {
-            alert("Server rejected response with: " + err);
+            alert("Formatta hata var.Haberler de üç anahtar " +
+                "kelimede (Tarih, İl, vaka, vefat, taburcu) ayrı ayrı cümlelerde bulunmalı." + err);
         })
     }
 
