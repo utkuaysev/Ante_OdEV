@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar"
 function App() {
     return (
         <main>
-            <Navbar />
+            <Navbar/>
             <Switch>
                 <Route path="/" component={Grafik} exact />
                 <Route path="/kayit" component={Kayit} />

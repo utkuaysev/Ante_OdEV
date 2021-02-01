@@ -20,13 +20,13 @@ public class RaporService {
     @Autowired
     RaporRepository raporRepository;
 
-    public ResponseEntity<List<RaporlarDTO>> getListRaporlarDTO(String sehir) {
+    public List<RaporlarDTO> getListRaporlarDTO(String sehir) {
         HashSet<String> turler = haberRecognitor.getTurler();
         List<RaporlarDTO> raporlarDTOList = new ArrayList<>();
         for (String tur : turler) {
             raporlarDTOList.add(new RaporlarDTO(raporRepository.aggregate(tur, sehir), tur));
         }
-        return new ResponseEntity<List<RaporlarDTO>>(raporlarDTOList, HttpStatus.OK);
+        return raporlarDTOList;
     }
     public List<String> findDistinctSehirler() {
         return raporRepository.findDistinctSehirler();

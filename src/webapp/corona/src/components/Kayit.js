@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "../style.css"
 class Kayit extends React.Component {
     constructor(props) {
         super(props);
@@ -33,12 +33,12 @@ class Kayit extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h2>
+                <h1 className="H1">
                     Haber
-                </h2>
+                </h1>
                 <textarea rows="8" value={this.state.value} onChange={this.handleChange}/>
                 <div>
-                    <input type="submit" value="Gönder"/>
+                    <input className="Button" type="submit" value="Gönder"/>
                 </div>
             </form>
         );

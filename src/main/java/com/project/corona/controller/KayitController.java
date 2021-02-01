@@ -24,6 +24,8 @@ public class KayitController {
     @Autowired
     private HaberRecognitor haberRecognitor;
 
+    //girilen haber parse edilir ve kısıtlama sartlarini karsilayan haberler rapor olarak veritabanına girilir.
+    //****************Varsayım: Cumlelerde sayidan sonra nokta gelmemelidir.*********************************
     @RequestMapping(value = "/haber", method = RequestMethod.POST)
     public String yeniHaber(@RequestBody HashMap<String, String> val) throws Exception {
         String haber = val.get("val");

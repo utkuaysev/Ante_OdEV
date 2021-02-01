@@ -145,6 +145,7 @@ class Grafik extends Component {
                 />
                 {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
                 <div>
+                    <h2>Şehir seçebilirsiniz.</h2>
                     <Select options={this.state.selectOptions} onChange={this.handleChange.bind(this)}/>
                     <p>Seçtiğiniz şehir: <strong>{this.state.name}</strong></p>
                 </div>
