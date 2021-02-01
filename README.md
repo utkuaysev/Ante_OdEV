@@ -16,7 +16,10 @@ yerine
 vaka sayisi 14 . vefat sayısı 12
 
 ## Odev run bilgileri
-Projeyi çalıştırmak için proje dizininde kullanılması gereken komut:
+
+Odevde ``` maven install ``` kullanılarak jar dosyası oluşturulmuştur.
+
+Odevi çalıştırmak için proje dizininde kullanılması gereken komut:
 
 ``` java -Dfile.encoding=UTF-8 -jar coronaEntity-0.0.1-SNAPSHOT.jar ```
 
@@ -25,3 +28,8 @@ React
 komutu kullanılarak build edilmiş, build dosyası src/main/resources/static dizinine atılmıştır.
 
 Veritabanı dump'u dump dosyasında olup örnek veri içermektedir.
+
+Restore etmek için kullanılacak komut:
+
+```mongorestore -d Ante ```
+
