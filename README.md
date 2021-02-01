@@ -1,4 +1,4 @@
-# Ante_OdEV
+# Ante_Odev
 Ante Grup icin verilen odev reposudur
 
 ## Odev
@@ -10,9 +10,9 @@ Grafiğin altındaki dropdown üzerinden de bütün şehirlere ya da spesifik ş
 
 Navigation bar'dan Kayıt sekmesine tıklayarak yeni haber girebilirsiniz. Haberde il date vaka vefat taburcu bilgilerinin hepsi olmalıdır.Yoksa sistem format hatası döner.
 
-Haber girilirken sayıdan sonra .(nokta) olmaması önemlidir. [<sayı> <boşluk> <nokta>] dogru formattır.
-Ornek: vaka sayisi 14.vefat sayısı 12  
-yerine
+Haber girilirken sayıdan sonra .(nokta) olmaması önemlidir. [<sayı> <boşluk> <nokta>] dogru formattır. <br />
+Ornek:<br /> vaka sayisi 14.vefat sayısı 12  <br />
+yerine <br />
 vaka sayisi 14 . vefat sayısı 12
 
 ## Odev run bilgileri
