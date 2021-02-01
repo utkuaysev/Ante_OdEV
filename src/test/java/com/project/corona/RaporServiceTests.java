@@ -56,11 +56,10 @@ public class RaporServiceTests {
         raporlarDTOList.add(new RaporlarDTO(list1, "vaka"));
         raporlarDTOList.add(new RaporlarDTO(list2, "vefat"));
         raporlarDTOList.add(new RaporlarDTO(list3, "taburcu"));
-        ResponseEntity<List<RaporlarDTO>> responseEntity = new ResponseEntity<List<RaporlarDTO>>(raporlarDTOList, HttpStatus.OK);
-        doReturn(responseEntity).when(spy, "getListRaporlarDTO", ArgumentMatchers.any());
+        doReturn(raporlarDTOList).when(spy, "getListRaporlarDTO", ArgumentMatchers.any());
         // Then
-        ResponseEntity<List<RaporlarDTO>> response = new ResponseEntity<>(spy.getListRaporlarDTO("Adana"),HttpStatus.OK);
-        assertEquals(responseEntity, response);
+        List<RaporlarDTO> response = spy.getListRaporlarDTO("Adana");
+        assertEquals(raporlarDTOList, response);
     }
 
     @Test
